@@ -9,7 +9,8 @@ export class OrderDataService {
   public customer_url:string="http://localhost:3000/userGetCustomer/";
   public order_url:string="http://localhost:3000/order/";
   public order_delivery_url:string="http://localhost:3000/userOrderDelivery/"
-  url:string="http://localhost:3000/userOrderDeliveryGet/"
+  url:string="http://localhost:3000/userOrderDeliveryGet/";
+  public order_details:string="http://localhost:3000/userOrderDetails/";
   constructor(public _http:HttpClient) { }
   getCustomerByEmail(fk_user_email){
     return this._http.get(this.customer_url+fk_user_email)
@@ -30,5 +31,8 @@ export class OrderDataService {
     let body = JSON.stringify(obj);
     let head = new HttpHeaders().set('Content-Type', "application/json");
     return this._http.post(this.url,body ,{headers: head});
+  }
+  getOrderDetailsOfCustomer(id){
+    return this._http.get(this.order_details+id);
   }
 }

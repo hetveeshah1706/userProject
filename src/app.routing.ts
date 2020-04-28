@@ -8,6 +8,7 @@ import { CheckOutComponent } from './app/check-out/check-out.component';
 import { BlogComponent } from './app/blog/blog.component';
 import { FAQComponent } from './app/faq/faq.component';
 import { ContactComponent } from './app/contact/contact.component';
+import { OrderDetailsComponent } from './app/order-details/order-details.component';
 
 
 
@@ -21,6 +22,7 @@ const arr: Routes = [
   {path:'faq',component:FAQComponent},
   {path:'contact',component:ContactComponent},
   {path:'singleproduct/:pro_id',component:SingleproductComponent},
+  {path:'viewOrderDetails',component:OrderDetailsComponent}
 
 
 

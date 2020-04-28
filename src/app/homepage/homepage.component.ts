@@ -80,5 +80,8 @@ export class HomepageComponent implements OnInit {
       //this._router.navigate(['/cart']);
     }
   }
+  onClick(){
+    this._route.navigate(['/viewOrderDetails']);
+  }
 
   }

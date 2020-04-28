@@ -1,0 +1,27 @@
+<h1 align="center">ORDER DETAILS</h1>
+<hr>
+<table class="table">
+
+  <thead>
+
+    <th scope="col">CUSTOMER NAME</th>
+    <td align="left">{{this.customer_name}}</td>
+
+    <tr>
+      <th scope="col">ORDER DATE</th>
+      <th scope="col">PRODUCT NAME</th>
+      <th scope="col">PRODUCT QUANTITY</th>
+      <th scope="col">PRODUCT DESCRIPTION</th>
+      <th scope="col">PRODUCT PRICE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of orderArr">
+      <td>{{item.order_date}}</td>
+      <td>{{item.pro_name}}</td>
+      <td>{{item.qty}}</td>
+      <td>{{item.pro_desc}}</td>
+      <td>{{item.pro_price}}</td>
+    </tr>
+  </tbody>
+</table>

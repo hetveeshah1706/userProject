@@ -14,6 +14,7 @@ import { CheckOutComponent } from './check-out/check-out.component';
 import { BlogComponent } from './blog/blog.component';
 import { FAQComponent } from './faq/faq.component';
 import { ContactComponent } from './contact/contact.component';
+import { OrderDetailsComponent } from './order-details/order-details.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ContactComponent } from './contact/contact.component';
     BlogComponent,
     FAQComponent,
     ContactComponent,
+    OrderDetailsComponent,
   ],
   imports: [
     BrowserModule,

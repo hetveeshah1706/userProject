@@ -18,7 +18,8 @@ export class CheckOutComponent implements OnInit {
   fk_user_email:string="";
   fk_customer_id:number=0;
   comment:string="";
-  orderArr:any=[]
+  orderArr:any=[];
+  getMonth:number;
   constructor(private _cartservice:CartDataService,public _orderService:OrderDataService) { }
 
   ngOnInit(): void {
@@ -40,7 +41,9 @@ export class CheckOutComponent implements OnInit {
       let fk_customer_id=this.fk_customer_id;
       let order_status="pending";
       let order_date =new Date();
-      let dateStr = order_date.getDate() + "/"+ order_date.getMonth() + "/" + order_date.getFullYear();
+      this.getMonth=order_date.getMonth()+1;
+      // let dateStr = order_date.getDate() + "/"+ this.getMonth + "/" + order_date.getFullYear();
+      let dateStr = order_date.getFullYear() + "-" + this.getMonth + "-" + order_date.getDate();
 
       console.log(dateStr);
     let orderObj=new addToCart(this.arrcartItem,dateStr,fk_customer_id,order_status)
